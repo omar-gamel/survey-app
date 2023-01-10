@@ -1,0 +1,74 @@
+body {
+  background-color: #333;
+  direction: rtl;
+}
+
+.main {
+  width: 950px;
+  background: #fff;
+  position: relative;
+  top: 50px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, .7);
+  text-align: center;
+  padding: 20px 20px 0 20px;
+}
+
+form {
+  margin-bottom: 300px;
+}
+
+p {
+  text-align: center;
+  padding-top: 25px;
+  direction: rtl;
+  margin-bottom: 40px;
+}
+
+label {
+  direction: rtl;
+  float: right;
+  padding: 0 10px 10px 0;
+  font-weight: 500;
+}
+
+.form-group {
+  width: 40%;
+  float: right;
+  margin-bottom: 10px;
+}
+
+input {
+  direction: rtl;
+  position: relative;
+  right: 8px;
+}
+
+table {
+  direction: rtl;
+  position: relative;
+  top: 20px;
+  width: 98%;
+  margin-left: 8px;
+  margin-bottom: 60px;
+  margin-top: -20px;
+  border-radius: 3px;
+}
+
+th {
+  text-align: center;
+}
+
+table tr td {
+  direction: rtl;
+}
+
+button {
+  padding: 8px 55px;
+  margin-bottom: 35px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

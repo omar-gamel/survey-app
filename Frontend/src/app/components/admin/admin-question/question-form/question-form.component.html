@@ -1,0 +1,31 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="save(f.value)">
+
+    <div class="form-group">
+      <label for="questionName">السؤال</label>
+      <input 
+        #questionName="ngModel"
+        [(ngModel)]="question$.name"
+        name="questionName"
+        type="text" 
+        class="form-control" 
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="type">نوع الإستبيان</label>
+      <select #type="ngModel" [(ngModel)]="question$.type" name="type" class="form-control" required>
+        <option value=""></option>
+        <option value="1" selected>نموذج تقيم أداء هيئه التدربس عن العام الحامعي</option>
+        <option value="2">استبيان قياس الرضا الوظيفي لأعضاء هيئه التدريس المعاونه عن العام الجامعي</option>
+        <option value="3">نموذج قياس أداء الهيئه المعاونه من قبل رئيس القسم عن العام الجامعي</option>
+        <option value="4">استماره تحديد الاحتياجات التدريبيه للقيادات الاكادميه</option>
+        <option value="5">استبيان لقياس مستوي رضا الطلاب حول مقرر دراسي</option>
+      </select>
+    </div>
+
+    <button *ngIf="!id" [disabled]= "!f.valid" type="submit" class="btn btn-primary">إضافة سؤال</button>
+    <button *ngIf="id" [disabled]= "!f.valid" type="submit" class="btn btn-primary">حفظ</button>
+    <button *ngIf="id" type="button" style="margin-right: 10px" class="btn btn-danger" (click)="delete()">حذف السؤال</button>
+  </form>
+</div>

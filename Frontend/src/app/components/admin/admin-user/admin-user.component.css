@@ -1,0 +1,20 @@
+.main {
+    float: right;
+    direction: rtl;
+    width: 100%;
+    padding: 30px 0;
+    margin-bottom: 130px;
+  }
+  
+  .table {
+    margin-top: 35px;
+  }
+  
+  .form-control {
+    margin: 25px 0;
+  }
+  
+  th {
+    text-align: right;
+  }
+  

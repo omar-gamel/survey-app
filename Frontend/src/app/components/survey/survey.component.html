@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="main">
+      <h1>اختار نوع الاستبيان</h1>
+      <ol>
+        <li><a [queryParams]="{ surveyType: 1 }" routerLink="/survey-subject">نموذج تقيم أداء هيئه التدربس عن العام الحامعي</a></li>
+        <li><a [queryParams]="{ surveyType: 2 }" routerLink="/survey-subject">استبيان قياس الرضا الوظيفي لأعضاء هيئه التدريس المعاونه عن العام الجامعي</a></li>
+        <li><a [queryParams]="{ surveyType: 3 }" routerLink="/survey-subject">نموذج قياس أداء الهيئه المعاونه من قبل رئيس القسم عن العام الجامعي</a></li>
+        <li><a [queryParams]="{ surveyType: 4 }" routerLink="/survey-subject">استماره تحديد الاحتياجات التدريبيه للقيادات الاكادميه</a></li>
+        <li><a [queryParams]="{ surveyType: 5 }" routerLink="/survey-subject">استبيان لقياس مستوي رضا الطلاب حول مقرر دراسي</a></li>
+      </ol>
+    </div>
+  </div>
+</div>

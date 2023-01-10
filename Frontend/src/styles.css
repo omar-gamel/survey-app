@@ -1,0 +1,27 @@
+
+@import "./assets/css/bootstrap.min.css";
+
+@import "~font-awesome/css/font-awesome.css";
+
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+
+@font-face {
+	font-family: "cocon";
+	src: url("./assets/fonts/Cocon-Next-Arabic-Light.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+.data-table,
+.data-table tr,
+.data-table th,
+.data-table td,
+.data-table tbody {
+  border: 2px solid #999;
+}
+
+body {
+  font-family: "cocon", sans-serif;
+  font-size: 16px;
+  background-color: #eee;
+}

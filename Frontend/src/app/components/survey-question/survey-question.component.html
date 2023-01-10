@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="main">
+    <p class="lead" style="color: blue">إستبيان طلابي لتقييم مقرر دراسي للعام الدراسي 2018 – 2019</p>
+    <form #f="ngForm" (ngSubmit)="save()">
+      <ng-container *ngIf="subject$">
+        <div class="form-group">
+          <label for="college">جامعة قناه السويس - كلية / معهد : </label>
+          <input  [disabled]= "true" value="حاسبات ومعلومات" name="college" type="text" class="form-control" >
+        </div>
+        <div class="form-group" style="margin-right: 30px;">
+          <label for="specialization"> البرنامج - التخصص : </label>
+          <input [disabled]= "true" [value]="subject$.department" name="specialization" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="material">إسـم المقـرر : </label>
+          <input [disabled]= "true" [value]="subject$.name" name="material" type="text" class="form-control">
+        </div>
+        <div class="form-group" style="margin-right: 30px;">
+          <label for="level"> السنه الدراسيه : </label>
+          <input [disabled]= "true" [value]="subject$.classroom" name="level" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="semester">الفصل الدراسي : </label>
+          <input  [disabled]= "true" [value]="subject$.semester" name="semester" type="text" class="form-control">
+        </div>
+        <div class="form-group" style="margin-right: 30px;">
+          <label for="instructor">اسم الدكتور : </label>
+          <input  [disabled]= "true" [value]="subject$.instructor" name="instructor" type="text" class="form-control">
+        </div>
+      </ng-container>  
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th>موضوعات الاستبيان</th>
+            <th>موافق بشدة</th>
+            <th>موافق</th>
+            <th>موافق إلي حد ما</th>
+            <th>غير موافق</th>
+            <th>لا أعلم</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of questions$;let id=index">
+            <td>{{id+1}}</td>
+            <td>{{ p.name }}</td>
+            <td><input (click)="choose(p._id,5)" ngModel type="radio" [name]="p._id" value="5" required></td>
+            <td><input (click)="choose(p._id,4)" ngModel type="radio" [name]="p._id" value="4" required></td>
+            <td><input (click)="choose(p._id,3)" ngModel type="radio" [name]="p._id" value="3" required></td>
+            <td><input (click)="choose(p._id,2)" ngModel type="radio" [name]="p._id" value="2" required></td>
+            <td><input (click)="choose(p._id,1)" ngModel type="radio" [name]="p._id" value="1" required></td>
+          </tr>
+        </tbody>
+      </table>
+      <button [disabled]= "!f.valid"  type="submit" class="btn btn-primary">سجل</button>
+    </form>
+  </div>
+</div>

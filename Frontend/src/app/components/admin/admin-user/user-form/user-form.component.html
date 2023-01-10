@@ -1,0 +1,106 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="save(f.value)">
+
+    <div class="form-group">
+      <label for="name">اسم المستخدم</label>
+      <input 
+        #name="ngModel"
+        [(ngModel)]="user$.name"
+        name="name"
+        type="text" 
+        class="form-control" 
+        required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">البريد الالكتروني</label>
+      <input 
+        #email="ngModel"
+        [(ngModel)]="user$.email"
+        name="email"
+        type="email" 
+        class="form-control" 
+        required
+        email>
+    </div>
+
+    <div class="form-group">
+      <label for="password">كلمه المرور</label>
+      <input 
+        #password="ngModel"
+        [(ngModel)]="user$.password"
+        name="password"
+        type="text" 
+        class="form-control" 
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="department">القسم</label>
+        <select #department="ngModel" [(ngModel)]="user$.department" name="department" class="form-control" required>
+          <option value=""></option>
+          <option value="عام" selected>عام</option>
+          <option value="علوم حاسب">علوم حاسب</option>
+          <option value="نظم معلومات">نظم معلومات</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+      <label for="classroom">السنه الدراسيه</label>
+      <select #classroom="ngModel" [(ngModel)]="user$.classroom" name="classroom" class="form-control" required>
+        <option value=""></option>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="semester">الفصل الدراسي</label>
+      <select #semester="ngModel" [(ngModel)]="user$.semester" name="semester" class="form-control" required>
+          <option value=""></option>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+      <label for="avatar">صوره شخصيه</label>
+      <input 
+        ngModel
+        (change)="fileChange($event)"
+        name="avatar"
+        type="file" 
+        class="form-control" 
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="mobile">رقم الموبايل</label>
+      <input 
+        #mobile="ngModel"
+        [(ngModel)]="user$.mobile"
+        name="mobile"
+        type="text" 
+        class="form-control" 
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="city">البلد</label>
+      <input 
+        #city="ngModel"
+        [(ngModel)]="user$.city"
+        name="city"
+        type="text" 
+        class="form-control" 
+        required>
+    </div>
+
+    <button *ngIf="!id" [disabled]= "!f.valid" type="submit" class="btn btn-primary">اضافه المستخدم</button>
+    <button *ngIf="id" [disabled]= "!f.valid" type="submit" class="btn btn-primary">تعديل المستخدم</button>
+    <button *ngIf="id" type="button" style="margin-right: 10px" class="btn btn-danger" (click)="delete()">حذف المستخدم</button>
+  </form>
+</div>
+  

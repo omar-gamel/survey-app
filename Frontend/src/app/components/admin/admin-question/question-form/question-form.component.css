@@ -1,0 +1,15 @@
+form {
+  padding: 45px 10px 390px 10px;
+  direction: rtl;
+  float: right;
+  width: 100%;
+}
+
+label[_ngcontent-c3] {
+    font-weight: 500;
+}
+
+input.ng-invalid.ng-touched, 
+select.ng-invalid.ng-touched {
+    border: 1px solid red;
+}

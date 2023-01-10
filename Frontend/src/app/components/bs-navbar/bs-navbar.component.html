@@ -1,0 +1,39 @@
+<!-- Start Navigation Bar Section -->
+<div class="navigation-bar">
+  <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="/"><span>A</span>Questionnaire</a>
+      </div>
+      <!-- Navbar Toggle Button -->
+      <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"><i class="fa fa-bars"></i></button>
+      <!-- Navbar Menu Links -->
+      <div class="navbar-navout navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+              <li routerLinkActive="active"><a routerLink="/"><i class="fa fa-home"></i>الصفحه الرائسية </a></li>
+              <li routerLinkActive="active"><a routerLink="/profile"><i class="fa fa-user"></i>البروفايل</a></li>
+              <li routerLinkActive="active"><a routerLink="/contact"><i class="fa fa-wrench"></i>اتصل بنا</a></li>
+              <li routerLinkActive="active"><a routerLink="/survey"><i class="fa fa-address-card"></i>الاستبيان</a></li>
+              <ng-template #anonymousUser>
+                <li class="nav-item" >
+                  <a class="nav-link" routerLink="/login">تسجيل الدخول</a>
+                </li>
+              </ng-template>
+               <!-- Dropdown -->
+              <li *ngIf="appUser; else anonymousUser" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  {{ appUser.name }} <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" routerLink="/profile">البروفايل</a>
+                  <ng-container *ngIf="appUser.admin">
+                    <a class="dropdown-item"  routerLink="/admin">إدارة الإستبيانات</a>
+                  </ng-container>
+                  <li class="divider"></li>
+                  <a class="dropdown-item" style="cursor: pointer;" (click)="logout()">تسجيل الخروج</a>
+                </div>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+<!-- End Navigation Bar Section -->

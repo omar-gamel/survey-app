@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+      <form *ngIf="appUser" class="form-horizontal" action="/action_page.php">
+        <div class="form-group">
+          <label class="control-label">القسم :</label>
+          <input [disabled]= "true" type="text" [value]="appUser.department" class="form-control">
+        </div>
+        <div class="form-group">
+          <label class="control-label">السنه الدراسيه :</label>
+          <input [disabled]= "true" type="text" [value]="appUser.classroom" class="form-control">
+        </div>
+        <div class="form-group">
+          <label class="control-label">الفصل الدراسي :</label>
+          <input [disabled]= "true" type="text" [value]="appUser.semester" class="form-control">
+        </div>
+    </form>
+    <div class="subject">
+      <a *ngFor="let subject of subjects" class="column" (click)="goToPage(subject._id)">
+        <div class="card" style="margin-bottom: 15px ">{{ subject.name }}</div>
+      </a>
+    </div>
+  </div>
+</div>

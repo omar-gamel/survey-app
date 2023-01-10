@@ -1,0 +1,207 @@
+/* start banner */
+.banner .banner-content {
+    min-height: 700px;
+    background: url(../../../assets/img/home/home-banner.jpg) no-repeat center;
+    background-size: cover
+}
+
+.banner .banner-text {
+    padding-top: 150px;
+    text-align: center
+}
+
+.banner .banner-text p {
+    font-size: 20px;
+    color: #002347;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.banner .banner-text h1 {
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #002347;
+
+}
+
+.banner .banner-text .getstart {
+    background-color: #fdc632;
+    color: #002347;
+    border: 1px solid #fdc632;
+    padding: 10px 55px;
+}
+
+.getstart {
+    padding: 15px 30px 15px 30px;
+    margin: 0px 20px 0px 0px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none
+}
+
+.banner .banner-text .login:hover,
+.banner .banner-text .getstart:hover {
+    background-color: #e0b23b;
+    border: 0px;
+    cursor: pointer;
+}
+
+@media(max-width:768px) {
+    .banner .banner-text p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:768px) {
+    .banner .banner-text h1 {
+        font-size: 35px;
+    }
+}
+
+@media(max-width:575px) {
+
+    .banner .banner-text .learn-more,
+    .banner .banner-text .opinion {
+        display: block;
+        margin-left: 18px;
+        margin-bottom: 25px
+    }
+}
+
+@media(max-width:768px) {
+    .banner .banner-text {
+        padding-top: 50px;
+    }
+}
+
+/* end banner */
+
+.how-answer {
+    background-color: red;
+    height: 100px;
+}
+
+/* start Feature */
+
+.feature-area .feature {
+    min-height: 500px;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.feature-area .feature p {
+    display: block;
+}
+
+.feature-area .feature .feature-content {
+    margin-top: 70px
+}
+
+.feature-area .feature .feature-content h2 {
+    font-size: 36px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #002347;
+    font-family: 'Lalezar', cursive;
+
+}
+
+.feature-area .feature .feature-content p {
+    font-size: 16px;
+    margin-top: 20px;
+    font-style: italic;
+
+}
+
+.single-feature {
+    margin-top: 100px;
+    background-color: #f9f9ff;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    min-height: 270px
+}
+
+.single-feature:hover {
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.3);
+}
+
+.single-feature .docs {
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+.single-feature .docs p {
+
+    font-size: 18px;
+    padding: 10px 5px 30px 5px;
+    text-align: center;
+    justify-content: end
+}
+
+.single-feature .docs h4 {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+
+/* end Feature */
+
+/* start quality */
+.quality {
+    margin-top: 20px;
+    min-height: 900px;
+
+}
+
+
+.quality .row {
+    margin-bottom: 30px
+}
+
+.quality .container .quality-image {
+    background-image: url(../../../assets/img/home/nik-macmillan-280300-unsplash.jpg);
+    background-size: cover;
+    height: 400px;
+    box-shadow: 6px 6px 16px 13px rgba(0, 0, 0, 0.2);
+}
+
+.quality .container .quality-image-1 {
+    background-image: url(../../../assets/img/home/adeolu-eletu-13086-unsplash.jpg);
+    background-size: cover;
+    height: 400px;
+    box-shadow: 6px 6px 16px 13px rgba(0, 0, 0, 0.2);
+}
+
+.quality .container .quality-description {
+    padding: 20px 10px 0px 20px;
+    background-color: #fff;
+    min-height: 300px;
+    margin-top: 50px;
+    box-shadow: 6px 6px 16px 13px rgba(0, 0, 0, 0.2);
+}
+
+.quality .container .quality-description-1 {
+    padding: 20px 10px 0px 20px;
+    background-color: #fff;
+    min-height: 300px;
+    margin-top: 50px;
+    box-shadow: 6px 6px 16px 13px rgba(0, 0, 0, 0.2);
+
+}
+
+.quality h4 {
+    color: #002347;
+    font-weight: 800;
+
+}
+
+.quality p {
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: right;
+    direction: rtl
+}

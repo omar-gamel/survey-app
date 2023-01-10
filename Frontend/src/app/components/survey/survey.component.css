@@ -1,0 +1,21 @@
+ol,
+h1,
+li {
+  direction: rtl;
+}
+
+.main {
+    margin-bottom: 125px;
+}
+
+ol li {
+    padding: 20px 0;
+}
+
+ol li a{
+    font-size: 20px;
+}
+
+h1 {
+  margin: 53px 25px 31px 0;
+}

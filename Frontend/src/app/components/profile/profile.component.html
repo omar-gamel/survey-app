@@ -1,0 +1,28 @@
+<div class="profile-body">
+  <div class="container">
+      <div *ngIf="appUser" class="row ">
+          <div class="photo col-lg-3  col-12 text-center">
+              <img [src]="image" alt="photo">
+              <h3 >{{ appUser.name }}</h3>
+          </div>
+          <div class="info col-lg-8  col-12">
+              <i class="fa fa-user fa-2x"> <span> About</span></i>
+              <div class="row">
+                  <div class="left text-left">
+                      <li><span class="cap">User Name:</span> {{ appUser.name }}</li>
+                      <li><span class="cap">Semester:</span> {{ appUser.semester }}</li>
+                      <li><span class="cap">City :</span> {{ appUser.city }}</li>
+                      <li><span class="cap">Phone :</span> {{ appUser.mobile }}</li>
+                  </div>
+                  <div class="right text-left">
+                    <li><span class="cap">Classroom :</span> {{ appUser.classroom }}</li>
+                      <li><span class="cap">E-mail :</span> {{ appUser.email }}</li>
+                      <li><span class="cap">country :</span> Egypt</li>
+                      <li><span class="cap">Birthday :</span>1/5/1997</li>
+                  </div>
+              </div>
+            <a class="btn btn-primary" routerLink="/change-password" style="width: 180px; margin-top: 10px">Change Password</a>
+          </div>
+      </div>
+  </div>
+</div>

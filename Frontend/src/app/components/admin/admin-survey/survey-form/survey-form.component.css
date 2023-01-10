@@ -1,0 +1,18 @@
+.header {
+  float: right;
+  margin-top: 2px;
+}
+
+.header h3 {
+  color: black;
+  margin-right: 212px;
+  text-decoration: underline;
+}
+
+.table {
+  margin-top: 35px;
+  float: right;
+  direction: rtl;
+  margin-right: -11px;
+  margin-bottom: 40px;
+}

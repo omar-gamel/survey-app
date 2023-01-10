@@ -1,0 +1,131 @@
+footer {
+    background-color: #002347;
+    color: #FFF;
+}
+
+footer.has-overlay::before {
+	background-color: rgba(0,0,0,.8);
+}
+footer .top-footer {
+	position: relative;
+	padding: 10px 0;
+}
+footer .top-footer .brand-logo {
+	font-size: 50px;
+	color: #fff;
+}
+
+/* Footer Links */
+footer .links-list {
+	list-style: none;
+	padding: 15px 0 0 0;
+}
+footer .links-list li {
+	margin-bottom: 15px;
+}
+footer .links-list li a {
+	text-decoration: none;
+	color: #00c4cc;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+footer .links-list li a i {
+	color: #fff;
+}
+footer .links-list li a span {
+    font-size: 21px;
+    color: #fff;   
+    padding-left: 5px;
+} 
+footer .links-list li a span:hover {
+	color: #fdc632;
+}
+
+footer .links-list li a i {
+    margin-left: 10px;
+    color: #fdc632;
+}
+
+
+/* Get The App */
+footer .get-app a {
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	box-shadow: -15px 5px 15px 0px rgba(255, 255, 255, 0.3);
+}
+footer .get-app h3,  
+footer .follow-us h3{
+	font-size: 21px;
+}
+
+
+footer .get-app a:last-child {
+	margin-left: 0;
+}
+footer .get-app a img {
+    max-width: 150px;
+    margin-right :10px;
+}
+
+/* Follow Us */
+.follow-us {
+	margin: 15px 0;
+}
+.follow-us .icon {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url('../../../assets/img/icons/social-icons.png');
+}
+.follow-us .icon.tw {background-position: 40px 0;}
+.follow-us .icon.ins {background-position: 80px 0;}
+
+/* Copyright */
+footer .copy-right {
+	position: relative;
+	background-color: #fdc632;
+	color: #333;
+}
+
+footer .copy-right p a { 
+	color: #002347;
+}
+
+footer .copy-right p {
+	padding: 5px 0;
+	margin: 0;
+}
+
+/* Footer Media Query */
+@media (max-width: 767px) {
+	/* Footer */
+	footer .top-footer {
+		padding-bottom: 0;
+	}
+	footer .logo-wrapper {
+		position: relative;
+	}
+	footer ul {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	footer ul li a span {
+		font-size: 16px;
+	}
+	footer ul li a i {
+		margin-left: 5px;
+	}
+	footer .payment {
+		position: static;
+		border-radius: 0;
+		padding: 10px;
+	}
+
+	@media (max-width: 480px) {
+		footer .top-footer .brand-logo {
+			font-size: 35px;
+		}
+	}
+}

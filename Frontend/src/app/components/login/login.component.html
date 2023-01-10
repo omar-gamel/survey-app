@@ -1,0 +1,28 @@
+<section class="content">
+    <div class="overlay">
+        <div class="container">
+            <form #f="ngForm" (ngSubmit)="save(f.value)">
+              <div class="form">
+                  <div class="overlay">
+                      <input
+                          ngModel
+                          name="email"
+                          type="text" 
+                          placeholder="Email adress"
+                          required>
+                      <input 
+                          ngModel
+                          name="password"
+                          type="password"
+                          placeholder="Password" 
+                          required>
+                      <button [disabled]= "!f.valid" type="submit" class="btn-sign">تسجيل الدخول</button>
+                      <br><br>
+                      <a  class="fpass" href="#">نسيت كلمة السر ؟</a>
+                  </div>
+              </div>
+          </form>
+        </div>
+    </div>
+  </section>
+  

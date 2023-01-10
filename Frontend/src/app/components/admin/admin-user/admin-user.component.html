@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="main">
+    <p>
+      <a routerLink="/user-form" class="btn btn-primary">اضافه مستخدم</a>
+    </p>
+    <p>
+      <input #query (keyup)="filter(query.value)" type="text" class="form-control" placeholder="Search...">
+    </p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>رقم المستخدم</th>
+          <th>اسم المستخدم</th>
+          <th>البريد لالكتروني</th>
+          <th>السنه الدراسيه</th>
+          <th>الفصل الدراسي</th>
+          <th>القسم</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of filterUser$">
+          <td>{{ u._id }}</td>
+          <td>{{ u.name }}</td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.classroom }}</td>
+          <td>{{ u.semester }}</td>
+          <td>{{ u.department }}</td>
+          <td>
+            <a [routerLink]="['/user-form', u._id]">تعديل</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+</div>
+  

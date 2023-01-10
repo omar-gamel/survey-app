@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="main">
+    <p>
+      <a routerLink="/question-form" class="btn btn-primary">إضافة سؤال</a>
+    </p>
+    <p>
+      <input #query (keyup)="filter(query.value)" type="text" class="form-control" placeholder="Search...">
+    </p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>رقم الاستبيان</th>
+          <th>اسم الاستبيان</th>
+          <th>نوع الاستبيان</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of filterQuestion$">
+          <td>{{ p._id }}</td>
+          <td>{{ p.name }}</td>
+          <td>{{ p.type }}</td>
+          <td>
+            <a [routerLink]="['/question-form', p._id]">تعديل</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+</div>

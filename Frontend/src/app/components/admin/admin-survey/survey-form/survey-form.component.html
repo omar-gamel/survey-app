@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="header">
+      <h3 class="title">نتيجة استبيان مدى رضا الطالب عن الخدمات الإلكترونية التي تقدمها الجامعة</h3>
+    </div>
+    <table class="table data-table table-bordered">
+      <tbody>
+        <tr>
+          <td>اسم الماده </td>
+          <td>{{ subject$.name }}</td>
+        </tr>
+        <tr>
+          <td>اسم الدكتور </td>
+          <td>{{ subject$.instructor }}</td>
+        </tr>
+        <tr *ngIf="answers">
+          <td>إجمالي السجلات الموجودة بالاستبيان </td>
+          <td>{{ answers.length }}</td>
+        </tr>
+        <tr>
+          <td>النسبة المئوية للإجمالي </td>
+          <td>100.00%</td>
+        </tr>
+      </tbody>
+    </table>
+      <div class="cart" *ngFor="let question of questions">
+        <app-charts [question]="question"></app-charts>
+      </div>
+  </div>
+</div>
